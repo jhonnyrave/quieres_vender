@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INSCRIPCION IPANU</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="toastr/build/toastr.css" rel="stylesheet"/>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Jquery JS file --> 
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bulma.min.css"
+    />
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-foundation.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+    <script src="toastr/toastr.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/LOGO-IPANU_736x.webp"
+            width= 20%
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#hero"
+                >Inscripción <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#msn_enterprise">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonios">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="msn_hero" id="msn_hero">
+        <p class="msn_subtitle_hero">Quiero ser asesora</p>
+      </section>
+      <section class="hero" id="hero">
+        <img
+          class="hero_img"
+          src="./images/smiling-woman.png"
+          alt="mujer indica el formulario"
+        />
+        <div class="wizard">
+          <div class="wizard-inner">
+            <div class="connecting-line"></div>
+            <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#step1" data-toggle="tab" aria-controls="step1" class = "step_1" role="tab" aria-expanded="true" >
+                <span class="round-tab"></span><i></i>
+              </a>
+            </li>
+            <li role="presentation" class="disabled">
+              <a href="#step2" data-toggle="tab" aria-controls="step2" class = "step_2" role="tab" aria-expanded="false" >
+                <span class="round-tab"></span> <i></i>
+              </a>
+            </li>
+            <li role="presentation" class="disabled codeudor">
+              <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab">
+                <span class="round-tab"></span> <i></i
+              ></a>
+            </li>
+            <li role="presentation" class="disabled referencias">
+              <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" >
+                <span class="round-tab"></span> <i></i>
+              </a>
+            </li>
+            </ul>
+          </div>
+  
+          <form class="form" role="form" novalidate="novalidate" name="fvalida" id="fvalida"  enctype="multipart/form-data">
+            <div class="tab-content" id="main_form">
+              <div class="tab-pane active" role="tabpanel" id="step1">
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="tipo_marca" class="form-select">
+                      <option value="ipanu">IPANU</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select id="tipo_vinculacion" class="form-select">
+                      <option value="" selected>Tipo de vinculación *</option>
+                      <option value="C">Crédito</option>
+                      <option value="P">Pago anticipado</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="tipo_doc" class="form-select">
+                      <option selected>Tipo de documento *</option>
+                      <option value="CC">Cédula de ciudadanía</option>
+                      <option value="CE">Cédula de extranjería</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      id="dctoIdentidad" type="text" class="form-control" placeholder="Número de documento" aria-label="Numero de documento"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control datepicker_input"
+                      placeholder="Fecha de nacimiento *"
+                      aria-label="Fecha de nacimiento"
+                      id="fecha_nac"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <input
+                      type="text"
+                      class="form-control datepicker_input border-2"
+                      placeholder="Fecha de expedición *"
+                      aria-label="Fecha de expedición"
+                      id="fecha_expedicion"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <select id="ciudad_exp" name="ciudad_exp"  class="form-select">
+                      <option value ="">Ciudad de expedición *</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Primer nombre *"
+                      aria-label="Primer nombre"
+                      id="primerNombre"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Segundo nombre"
+                      aria-label="Segundo nombre"
+                      id = "segundoNombre"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Primer apellido *"
+                      aria-label="Primer apellido"
+                      id="primerApellido"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Segundo apellido"
+                      aria-label="Segundo apellido"
+                      id="segundoApellido"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Correo electrónico *"
+                      aria-label="Correo electrónico"
+                      id="txtCorreo"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Confirmar correo electrónico *"
+                      aria-label="Correo electrónico"
+                      id = "txtConfirCorreo"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Teléfono"
+                      aria-label="Telefono"
+                      id="telefono"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Celular *"
+                      aria-label="Celular"
+                      id="celular"
+                    />
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="terminos"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    He leído y acepto los
+                    <a class="tyc" data-toggle="modal" data-target="#modalTerminos" href="#">términos y condiciones</a> y autorizo
+                    el tratamiento de mis datos en los términos
+                    <a class="tyc" data-toggle="modal" data-target="#modalDatos" href="#">aqui</a> indicados
+                  </label>
+                </div>
+                <ul class="list-inline pull-right">
+                  <li>
+                    <button type="button" class="btn btn-dark next-step" id="paso_1">
+                      Siguiente
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" role="tabpanel" id="step2">
+                <h4 class="text-center">¿Donde vives?</h4>
+                <br />
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="txtPais" class="form-select">
+                      <option value="169">COLOMBIA</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select id="txtdepto" name = "txtdepto" class="form-select">
+                      <option value="">Departamento*</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="ciudad_dpto"  name="ciudad_dpto" class="form-select">
+                      <option value="">Ciudad*</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select id="txtBarrio" name="txtBarrio" class="form-select">
+                      <option value="">...</option>
+                    </select>
+                    <ul class="list dropdown-menu2 animation-expand"></ul>
+                    <a
+                      href="#listtwo"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="listtwo"
+                      >No encuentras tu barrio? <i class="fa fa-chevron-down"></i
+                    ></a>
+                    <div class="collapse" id="listtwo">
+                      <div class="list-box">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <p>Selecciona el barrio OTRO y en el campo complemento escribe tu barrio</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4>Dirección</h4>
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="tipo_direccion" name="tipo_direccion" class="form-select">
+                      <option value="" >Tipo via*</option>
+                      <option value="AGP">AGRUPACION</option>
+                      <option value="AUT">AUTOPISTA</option>
+                      <option value="AV">AVENIDA</option>
+                      <option value="AC">AVENIDA CALLE</option>
+                      <option value="AK">AVENIDA CARRERA</option>
+                      <option value="BL">BLOQUE</option>
+                      <option value="CL">CALLE</option>
+                      <option value="CR">CARRERA</option>
+                      <option value="CRT">CARRETERA</option>
+                      <option value="CA">CASA</option>
+                      <option value="CC">CENTRO COMERCIAL</option>
+                      <option value="CIR">CIRCUNVALAR</option>
+                      <option value="CONJ">CONJUNTO</option>
+                      <option value="CONS">CONSULTORIO</option>
+                      <option value="DG">DIAGONAL</option>
+                      <option value="ED">EDIFICIO</option>
+                      <option value="ET">ETAPA</option>
+                      <option value="IN">INTERIOR</option>
+                      <option value="KDX">KDX</option>
+                      <option value="KM">KILOMETRO</option>
+                      <option value="LT">LOTE</option>
+                      <option value="MZ">MANZANA</option>
+                      <option value="PLZ">PLAZA</option>
+                      <option value="TO">TORRE</option>
+                      <option value="TV">TRANSVERSAL</option>
+                      <option value="UN">UNIDAD</option>
+                      <option value="URB">URBANIZACION</option>
+                      <option value="VIA">VIA</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="#Número"
+                      aria-label="numero"
+                      id="numero"
+                      name="numero"
+                    />
+                  </div>
+                  <div class="col">
+                    <select id="letra" class="form-select">
+                      <option value="">Letra</option>
+                      <option value="A">A</option>
+                      <option value="AA">AA</option>
+                      <option value="AB">AB</option>
+                      <option value="AC">AC</option>
+                      <option value="AD">AD</option>
+                      <option value="AE">AE</option>
+                      <option value="AF">AF</option>
+                      <option value="AG">AG</option>
+                      <option value="AH">AH</option>
+                      <option value="B">B</option>
+                      <option value="BA">BA</option>
+                      <option value="BB">BC</option>
+                      <option value="BC">BC</option>
+                      <option value="BD">BD</option>
+                      <option value="BE">BE</option>
+                      <option value="BF">BF</option>
+                      <option value="BG">BG</option>
+                      <option value="BH">BH</option>
+                      <option value="C">C</option>
+                      <option value="CA">CA</option>
+                      <option value="CB">CB</option>
+                      <option value="CC">CC</option>
+                      <option value="CD">CD</option>
+                      <option value="CE">CE</option>
+                      <option value="CF">CF</option>
+                      <option value="CG">CG</option>
+                      <option value="CH">CH</option>
+                      <option value="D">D</option>
+                      <option value="DA">DA</option>
+                      <option value="DB">DB</option>
+                      <option value="DC">DC</option>
+                      <option value="DD">DD</option>
+                      <option value="DE">DE</option>
+                      <option value="DF">DF</option>
+                      <option value="DG">DG</option>
+                      <option value="DH">DH</option>
+                      <option value="E">E</option>
+                      <option value="EA">EA</option>
+                      <option value="EB">EB</option>
+                      <option value="EC">EC</option>
+                      <option value="ED">ED</option>
+                      <option value="EE">EE</option>
+                      <option value="EF">EF</option>
+                      <option value="EG">EG</option>
+                      <option value="EH">EH</option>
+                      <option value="F">F</option>
+                      <option value="FA">FA</option>
+                      <option value="FB">FB</option>
+                      <option value="FC">FC</option>
+                      <option value="FD">FD</option>
+                      <option value="FE">FE</option>
+                      <option value="FF">FF</option>
+                      <option value="FG">FG</option>
+                      <option value="FH">FH</option>
+                      <option value="G">G</option>
+                      <option value="GA">GA</option>
+                      <option value="GB">GB</option>
+                      <option value="GC">GC</option>
+                      <option value="GD">GD</option>
+                      <option value="GE">GE</option>
+                      <option value="GF">GF</option>
+                      <option value="GG">GG</option>
+                      <option value="GH">GH</option>
+                      <option value="H">H</option>
+                      <option value="HA">HA</option>
+                      <option value="HB">HB</option>
+                      <option value="HC">HC</option>
+                      <option value="HD">HD</option>
+                      <option value="HE">HE</option>
+                      <option value="HF">HF</option>
+                      <option value="HG">HG</option>
+                      <option value="N">N</option>
+                      <option value="NA">NA</option>
+                      <option value="NB">NB</option>
+                      <option value="NC">NC</option>
+                      <option value="ND">ND</option>
+                      <option value="NE">NE</option>
+                      <option value="NF">NF</option>
+                      <option value="NG">NG</option>
+                      <option value="W">W</option>
+                      <option value="WA">WA</option>
+                      <option value="WB">WB</option>
+                      <option value="WC">WC</option>
+                      <option value="WD">WD</option>
+                      <option value="WE">WE</option>
+                      <option value="WF">WF</option>
+                      <option value="WG">WG</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select id="cuadrante" name="cuadrante" class="form-select">
+                      <option value="">Cuadrante</option>
+                      <option value="SUR">SUR</option>
+                      <option value="NORTE">NORTE</option>
+                      <option value="ESTE">ESTE</option>
+                      <option value="OESTE">OESTE</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="#Numero"
+                      aria-label="numero_dos"
+                      id="numero_dos"
+                      name="numero_dos"
+                    />
+                  </div>
+                  <div class="col">
+                    <select id="letra_dos" class="form-select">
+                      <option value="">Letra</option>
+                      <option value="A">A</option>
+                      <option value="AA">AA</option>
+                      <option value="AB">AB</option>
+                      <option value="AC">AC</option>
+                      <option value="AD">AD</option>
+                      <option value="AE">AE</option>
+                      <option value="AF">AF</option>
+                      <option value="AG">AG</option>
+                      <option value="AH">AH</option>
+                      <option value="B">B</option>
+                      <option value="BA">BA</option>
+                      <option value="BB">BC</option>
+                      <option value="BC">BC</option>
+                      <option value="BD">BD</option>
+                      <option value="BE">BE</option>
+                      <option value="BF">BF</option>
+                      <option value="BG">BG</option>
+                      <option value="BH">BH</option>
+                      <option value="C">C</option>
+                      <option value="CA">CA</option>
+                      <option value="CB">CB</option>
+                      <option value="CC">CC</option>
+                      <option value="CD">CD</option>
+                      <option value="CE">CE</option>
+                      <option value="CF">CF</option>
+                      <option value="CG">CG</option>
+                      <option value="CH">CH</option>
+                      <option value="D">D</option>
+                      <option value="DA">DA</option>
+                      <option value="DB">DB</option>
+                      <option value="DC">DC</option>
+                      <option value="DD">DD</option>
+                      <option value="DE">DE</option>
+                      <option value="DF">DF</option>
+                      <option value="DG">DG</option>
+                      <option value="DH">DH</option>
+                      <option value="E">E</option>
+                      <option value="EA">EA</option>
+                      <option value="EB">EB</option>
+                      <option value="EC">EC</option>
+                      <option value="ED">ED</option>
+                      <option value="EE">EE</option>
+                      <option value="EF">EF</option>
+                      <option value="EG">EG</option>
+                      <option value="EH">EH</option>
+                      <option value="F">F</option>
+                      <option value="FA">FA</option>
+                      <option value="FB">FB</option>
+                      <option value="FC">FC</option>
+                      <option value="FD">FD</option>
+                      <option value="FE">FE</option>
+                      <option value="FF">FF</option>
+                      <option value="FG">FG</option>
+                      <option value="FH">FH</option>
+                      <option value="G">G</option>
+                      <option value="GA">GA</option>
+                      <option value="GB">GB</option>
+                      <option value="GC">GC</option>
+                      <option value="GD">GD</option>
+                      <option value="GE">GE</option>
+                      <option value="GF">GF</option>
+                      <option value="GG">GG</option>
+                      <option value="GH">GH</option>
+                      <option value="H">H</option>
+                      <option value="HA">HA</option>
+                      <option value="HB">HB</option>
+                      <option value="HC">HC</option>
+                      <option value="HD">HD</option>
+                      <option value="HE">HE</option>
+                      <option value="HF">HF</option>
+                      <option value="HG">HG</option>
+                      <option value="N">N</option>
+                      <option value="NA">NA</option>
+                      <option value="NB">NB</option>
+                      <option value="NC">NC</option>
+                      <option value="ND">ND</option>
+                      <option value="NE">NE</option>
+                      <option value="NF">NF</option>
+                      <option value="NG">NG</option>
+                      <option value="W">W</option>
+                      <option value="WA">WA</option>
+                      <option value="WB">WB</option>
+                      <option value="WC">WC</option>
+                      <option value="WD">WD</option>
+                      <option value="WE">WE</option>
+                      <option value="WF">WF</option>
+                      <option value="WG">WG</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select id="cuadrante_dos" name="cuadrante_dos" class="form-select">
+                      <option value="">Cuadrante</option>
+                      <option value="SUR">SUR</option>
+                      <option value="NORTE">NORTE</option>
+                      <option value="ESTE">ESTE</option>
+                      <option value="OESTE">OESTE</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="#Número"
+                      aria-label="numero_tres"
+                      id="numero_tres"
+                      name="numero_tres"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Complemento"
+                      aria-label="complemento"
+                      id="complemento"
+                      name="complemento"
+                    />
+                  </div>
+                </div>
+  
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Dirección ingresada"
+                      aria-label="direccion"
+                      id="direccion"
+                      disabled
+                    />
+                  </div>
+                </div>
+  
+                <h5>Eres referida por alguien?</h5>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="CC referida"
+                      aria-label="referida"
+                      id="referida"
+                      name="referida"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre referida"
+                      aria-label="nombre_referida"
+                      id="nombre_referida"
+                      name="nombre_referida"
+                      disabled
+                    />
+                  </div>
+                </div>
+  
+                <ul class="list-inline pull-right">
+                  <li>
+                    <button type="button" class="btn btn-dark prev-step">
+                      Anterior
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="btn btn-dark next-step"
+                      id="paso_2"
+                    >
+                      Siguiente
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" role="tabpanel" id="step3">
+                <h4 class="text-center">Datos de codeudor</h4>
+                <br />
+                <div class="row mb-3">
+                  <div class="col">
+                    <select id="tipo_doc_cod" class="form-select">
+                      <option selected>Tipo de documento*</option>
+                      <option value="CC">Cédula de ciudadanía</option>
+                      <option value="CE">Cédula de extranjería</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      id="numero_doc_cod"
+                      type="text"
+                      class="form-control"
+                      placeholder="Número de documento"
+                      aria-label="Numero de documento"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control datepicker_input"
+                      placeholder="Fecha de nacimiento"
+                      aria-label="Fecha de nacimiento"
+                      id="fecha_nac_cod"
+                    />
+                  </div>
+                  <div class="col">
+                    <select id="ciudad_exp_cod" class="form-select">
+                      <option value="">Ciudad de expedición</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Primer nombre"
+                      aria-label="Primer nombre"
+                      id="primerNombreCod"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Segundo nombre"
+                      aria-label="Segundo nombre"
+                      id="segundoNombreCod"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Primer apellido"
+                      aria-label="Primer apellido"
+                      id="primerApellidoCod"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Segundo apellido"
+                      aria-label="Segundo apellido"
+                      id="segundoApellidoCod"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Correo electrónico"
+                      aria-label="Correo electrónico"
+                      id="correoCod"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Confirmar correo electrónico"
+                      aria-label="Correo electrónico"
+                      id="confi_correoCod"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Teléfono"
+                      aria-label="Telefono"
+                      id="telefonoCod"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Celular"
+                      aria-label="Celular"
+                      id="celularCod"
+                    />
+                  </div>
+                </div>
+                <ul class="list-inline pull-right">
+                  <li>
+                    <button type="button" class="btn btn-dark prev-step">
+                      Anterior
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="btn btn-dark next-step"
+                      id="paso_3"
+                    >
+                      Siguiente
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" role="tabpanel" id="step4">
+                <h4 class="text-center">Step 4</h4>
+                <div class="all-info-container">
+                  <div class="list-content">
+                    <a
+                      href="#listone"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="listone"
+                      >Collapse 1 <i class="fa fa-chevron-down"></i
+                    ></a>
+                    <div class="collapse" id="listone">
+                      <div class="list-box">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>First and Last Name *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+  
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Phone Number *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-content">
+                    <a
+                      href="#listtwo"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="listtwo"
+                      >Collapse 2 <i class="fa fa-chevron-down"></i
+                    ></a>
+                    <div class="collapse" id="listtwo">
+                      <div class="list-box">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Address 1 *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+  
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>City / Town *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Country *</label>
+                              <select
+                                name="country2"
+                                class="form-control"
+                                id="country2"
+                                disabled="disabled"
+                              >
+                                <option value="NG" selected="selected">
+                                  Nigeria
+                                </option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk Island</option>
+                                <option value="KP">North Korea</option>
+                                <option value="MP">
+                                  Northern Mariana Islands
+                                </option>
+                                <option value="NO">Norway</option>
+                              </select>
+                            </div>
+                          </div>
+  
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Legal Form</label>
+                              <select
+                                name="legalform2"
+                                class="form-control"
+                                id="legalform2"
+                                disabled="disabled"
+                              >
+                                <option value="" selected="selected">
+                                  -Select an Answer-
+                                </option>
+                                <option value="AG">
+                                  Limited liability company
+                                </option>
+                                <option value="GmbH">Public Company</option>
+                                <option value="GbR">
+                                  No minimum capital, unlimited liability of
+                                  partners, non-busines
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Business Registration No.</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Registered</label>
+                              <select
+                                name="vat2"
+                                class="form-control"
+                                id="vat2"
+                                disabled="disabled"
+                              >
+                                <option value="" selected="selected">
+                                  -Select an Answer-
+                                </option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Seller</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>Company Name *</label>
+                              <input
+                                class="form-control"
+                                type="password"
+                                name="name"
+                                placeholder=""
+                                disabled="disabled"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-content">
+                    <a
+                      href="#listthree"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      aria-controls="listthree"
+                      >Collapse 3 <i class="fa fa-chevron-down"></i
+                    ></a>
+                    <div class="collapse" id="listthree">
+                      <div class="list-box">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Name *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+  
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Number *</label>
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <ul class="list-inline pull-right">
+                  <li>
+                    <button type="button" class="default-btn prev-step">
+                      Anterior
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="default-btn next-step">
+                      Finalizar
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </form>
+        </div>
+        
+      </section>
+      <section class="msn_enterprise" id="msn_enterprise">
+        <p class="msn_subtitle">#Vibrando+alto2022</p>
+      </section>
+      <section class="grid_beneficios" id="grid_beneficios">
+        <iframe
+          class="video_catalogo"
+          src="https://www.youtube.com/embed/sX8M2CjegwY"
+          title="Video IPANU"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <img class="beneficios ben_1" src="images/ganancias.png" alt="" />
+        <img class="beneficios ben_2" src="images/libertad.png" alt="" />
+        <img class="beneficios ben_3" src="images/trabajo_casa_3.png" alt="" />
+        <img class="beneficios ben_4" src="images/premios.png" alt="" />
+      </section>
+      <section
+        class="testimonios d-flex justify-content-center flex-column align-items-center"
+        id="testimonios"
+      >
+        <h2 class="testimonios_title">Testimonios Ipanú</h2>
+        <div class="card-deck grid_testimonios mt-4">
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="images/face_2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Kellys Hernández.</h5>
+              <h6 class="card-subtitle">ASESORA</h6>
+              <p class="card-text">
+                “Los accesorios de Ipanú me ENCANTAN, por su toque sutil y moderno que se complementa para cada uno de mis estilos, sus colores le dan vida a cualquier pinta sean modernos o clásicos”
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="images/face_2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sandra Villamizar</h5>
+              <h6 class="card-subtitle">ASESORA</h6>
+              <p class="card-text">
+                “En Ipanú encuentras innovación, elegancia y variedad, lo cual lo hace nuestro catálogo favorito. Sus diseños a la moda y diversidad en bisutería te dejan completamente enamorado”.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="images/face_2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nancy Perez</h5>
+              <h6 class="card-subtitle">ASESORA</h6>
+              <p class="card-text">
+                “"Quiero felicitarlos por el servicio, la verdad compre con desconfianza, era mi primer compra y estoy muy contenta por que todo salió muy bien FELICITACIONES a la empresa"”.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="images/face_2.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Yeni Paola Barajas</h5>
+              <h6 class="card-subtitle">ASESORA</h6>
+              <p class="card-text">
+                “Me encantan sus accesorios, primero por su calidad y segundo por sus diseños. Mis clientes son felices al recibir su pedido y siempre dan muy buenas referencias del producto”.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="location.href='#hero'"
+          class="btn btn-dark btn_testimonios shadow-lg mt-5"
+        >
+          ÚNETE
+        </button>
+      </section>
+      <section class="contacto p-5" id="contacto">
+        <div class="info_contacto">
+          <h2 class="contacto_title">¿Tienes dudas?</h2>
+          <p class="contacto_subtitle">
+            Contáctanos a través de los siguientes canales de atención:
+          </p>
+          <div class="contacto_icons">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Hecho con
+        <span><i class="fa fa-heart" aria-hidden="true"></i></span> por IPANU
+      </p>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+   
+     <!-- Modal -->
+     <div class="modal fade" id="modalDocumentos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ingreso de documentos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                <form class="form form-validation" role="form" novalidate="novalidate" id="formIncor" action="./enviar.php" method="post" enctype="multipart/form-data">
+                  <div class="col-sm-12">
+                    <h5>Para ser asesora Ipanú debes adjuntar las siguientes im&aacute;genes en PDF, jpg o png.</h5><br>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">*Copia frontal de la c&eacute;dula</label>
+                    </div>
+                    <div class="col-sm-12">
+                      <label for="frontCedula"> <span class="btn btn-primary">Imagen</span></label>
+                      <input type="file" name="frontCedula" required id="frontCedula" capture class="form-control file files" accept="image/jpeg,image/gif,image/png,application/pdf">
+                      <img id="img_frontCedula" src="#" class="imgs"  alt="Cedula frontal" />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">*Copia reverso de la c&eacute;dula</label>
+                    </div>
+                    <div class="col-sm-12">
+                      <label for="reverCedula"> <span class="btn btn-primary" >Imagen</span></label>
+                      <input type="file" name="reverCedula" required id="reverCedula" capture class="form-control file files" accept="image/jpeg,image/gif,image/png,application/pdf">
+                      <img id="img_reverCedula" src="#" class="imgs"  alt="Cedula reverso" />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="foto" class="control-label">*Foto Selfie con la c&eacute;dula</label>
+                    </div>
+                    <div class="col-sm-12">
+                      <label for="foto"> <span class="btn btn-primary">Imagen</span></label>
+                      <input type="file" name="foto" capture id="foto" class="form-control file files" accept="image/jpeg,image/gif,image/png,application/pdf">
+                      <img id="img_foto" src="#" class="imgs"  alt="Foto selfie" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" id="btnGuardarDocumentos" class="btn btn-dark">Subir Imagenes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalDocumentosCod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ingreso de documentos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                <form class="form form-validation" role="form" novalidate="novalidate" id="formIncorCod" enctype="multipart/form-data">
+									<div class="col-sm-12">
+										<h4>Para ser asesora Ipanú debes adjuntar las im&aacute;genes del codeudor en PDF, jpg o png.</h4><br>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-12">
+											<div class="col-sm-12">
+												<label class="control-label">*Copia frontal de la c&eacute;dula del codeudor</label>
+											</div>
+											<div class="col-sm-12">
+												<label for="frontCedulaCod"> <span class="btn btn-primary">Imagen</span></label>
+												<input type="file" name="frontCedulaCod" required id="frontCedulaCod" capture class="form-control file files" accept="image/jpeg,image/gif,image/png,application/pdf">
+												<img id="img_frontCedulaCod" src="#" class="imgs"  alt="Cedula frontal" />
+											</div>
+										</div>
+										<div class="form-group col-md-12">
+											<div class="col-sm-12">
+												<label class="control-label">*Copia reverso de la c&eacute;dula del codeudor</label>
+											</div>
+											<div class="col-sm-12">
+												<label for="reverCedulaCod"> <span class="btn btn-primary" >Imagen</span></label>
+												<input type="file" name="reverCedulaCod" required id="reverCedulaCod" capture class="form-control file files" accept="image/jpeg,image/gif,image/png,application/pdf">
+												<img id="img_reverCedulaCod" src="#" class="imgs"  alt="Cedula reverso" />
+											</div>
+										</div>
+									</div>
+								  </div>
+									<div class="card-actionbar-row pull-right">
+										<a href="#" class="btn btn-flat btn-default ink-reaction"data-dismiss="modal">Cancelar</a>
+										<a href="#" id="btnGuardarDocumentosCod" class="btn btn btn-success ink-reaction" >Subir Imagenes</a>
+									</div>
+								</form>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" id="btnGuardarDocumentos" class="btn btn-dark">Subir Imagenes</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalCodigoVer" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title" id="formModalLabel">C&oacute;digo de verificaci&oacute;n</h3>
+          </div>
+          <form class="form form-validation" role="form" novalidate="novalidate" id="frmCodigoVerif">
+            <div class="modal-body">
+              <div class="col-sm-12" id="txtInfo">
+                <span class="control-label">Para finalizar la inscripci&oacute;n por favor  ingrese el c&oacute;digo de 4 d&iacute;gitos que llegar&aacute; a su celular v&iacute;a mensaje de texto o correo electrónico.</span><br><br>
+              </div>
+    
+              <div class="col-sm-12">
+                <br>
+                <div class="form-group">
+                  <label for="codigoVerif" class="control-label">Ingrese c&oacute;digo enviado</label>
+                  <input type="number" name="codigoVerif" id="codigoVerif" class="form-control" data-rule-minlength="4" data-rule-maxlength="4" data-rule-digits="true" required>
+                </div>
+              </div>
+    
+              <!--<div class="col-sm-12">
+                <br><span class="control-label alert-label">Si no puedes recibir mensajes...</span><br>
+              </div>-->
+            </div>
+            <div class="modal-footer seccionCodigo2" id="confirmaSMS">
+              <button type="button" class="btn btn-default" id="botonReEnviarSMS">Reenivar SMS</button>
+              <button type="button" class="btn btn-primary" id="validarCodVerif">Validar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </body>
+</html>
+
+
