@@ -68,7 +68,7 @@ main {
 }
 
 .hero {
-  background-image: url("images/bg_colors4.jpg");
+  background-image: url("images/fondo_ipanu.jpg");
   background-size: cover;
   background-position: center 60%;
   background-repeat: no-repeat;
@@ -105,7 +105,7 @@ img.navbar-logo {
 }
 
 .hero form {
-  background-color: #d39791;
+  background-color: #c4655c;
   width: 90%;
   height: 100%;
   padding: 4rem;
@@ -115,7 +115,7 @@ img.navbar-logo {
 
 .form-check-input:checked {
   background-color: #1f1b1b;
-  border-color: #d39791;
+  border-color: #c4655c;
 }
 
 .btn-dark {
@@ -174,7 +174,11 @@ img.navbar-logo {
 }
 
 .msn_subtitle {
-  color: white;
+  background-image: url("images/vibrando-alto.png");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  color: #f6f7f600;
   font-size: 4rem;
   font-family: "Caveat", cursive;
   margin-top: 3rem;
@@ -182,7 +186,7 @@ img.navbar-logo {
 
 .msn_subtitle:hover {
   font-size: 3.4rem;
-  color: #d39791;
+  color: #f6f7f600;
   font-weight: bolder;
 }
 
@@ -308,7 +312,7 @@ section.testimonios {
 }
 
 .contacto {
-  background-image: url("./images/Chatea-ipanu.webp");
+  background-image: url("./images/Ipanu.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
