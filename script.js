@@ -237,10 +237,10 @@ $(document).ready(function () {
       if(tipo_vinculacion == 'P'){
         quieres_vender.enviarSMS();
       }else{
-        var active = $('.wizard .nav-tabs li.active');
+        /*var active = $('.wizard .nav-tabs li.active');
         active.next().removeClass('disabled');
-        nextTab(active);
-        //$("#modalDocumentos").modal("show");
+        nextTab(active);*/
+        $("#modalDocumentos").modal("show");
       }
     }
   });
@@ -1528,24 +1528,47 @@ if(codigoVerif!=''){
 }
 
 quieres_vender.subirFtp = function(cedula,tipo){
+  
+  var form =new FormData($("#formIncor")[0]);
 
+  fetch('/enviar.php',{
+    method: 'POST',
+    body: form
+   })
+form.append("modulo","quieres_vender");
+form.append("metodo","subirFtp");
+form.append("dctoIdentidad",cedula);
+form.append("tipo",tipo);
+  $.ajax({
+    type:'POST',
+    url:'enviar.php',
+    dataType:'JSON',
+    async:true,
+    cache:false,
+    contentType:false,
+    processData:false,
+    data:form,
+    success:function(data){
+     
+        if(data.success==true){
 
-  // Add record
-  $.post("enviar.php", {
-    cedula: cedula,
-    tipo: tipo
-}, function (data, status) {
-    // close the popup
-    $("#add_new_record_modal").modal("hide");
+            adjuntos.push({
+              frontalcod:data.frontalcod,
+              reversocod:data.reversocod
+            }); 
+          
+          toastr.success('Imagenes cargadas correctamente.');
 
-    // read records again
-    readRecords();
+          $("#modalDocumentosCod").modal("hide");
 
-    // clear fields from the popup
-    $("#idalumno").val("");
-    $("#codalumno").val("");
-    $("#codmatri").val("");
-    $("#obs").val("");
+          var active = $('.wizard .nav-tabs li.active');
+          active.next().removeClass('disabled');
+          nextTab(active);
+
+        }else{
+          toastr.error(data.message);
+        } 
+    }
 });
 }
 
